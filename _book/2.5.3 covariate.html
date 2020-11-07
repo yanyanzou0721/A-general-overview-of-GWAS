@@ -60,7 +60,7 @@
     <link rel="next" href="2.5.4 asso.html" />
     
     
-    <link rel="prev" href="2.5.2 imputation.html" />
+    <link rel="prev" href="2.5.2 qc.html" />
     
 
     </head>
@@ -259,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.2" data-path="2.4.2 rexources.html">
+        <li class="chapter " data-level="1.3.4.2" data-path="2.4.2 resources.html">
             
-                <a href="2.4.2 rexources.html">
+                <a href="2.4.2 resources.html">
             
                     
                     2.4.2 Current resources
@@ -291,12 +291,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.5.1" data-path="2.5.1 qc.html">
+        <li class="chapter " data-level="1.3.5.1" data-path="2.5.1 imputation.html">
             
-                <a href="2.5.1 qc.html">
+                <a href="2.5.1 imputation.html">
             
                     
-                    2.5.1 quality control
+                    2.5.1 imputation
             
                 </a>
             
@@ -304,12 +304,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.2" data-path="2.5.2 imputation.html">
+        <li class="chapter " data-level="1.3.5.2" data-path="2.5.2 qc.html">
             
-                <a href="2.5.2 imputation.html">
+                <a href="2.5.2 qc.html">
             
                     
-                    2.5.2 imputation
+                    2.5.2 quality control
             
                 </a>
             
@@ -366,12 +366,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="3. Evaluation.html">
+        <li class="chapter " data-level="1.4" data-path="3. summary.html">
             
-                <a href="3. Evaluation.html">
+                <a href="3. summary.html">
             
                     
-                    3. evaluation
+                    3. Summary
             
                 </a>
             
@@ -495,7 +495,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="covariate">covariate</h1>
+                                <h1 id="covariate"><center>Covariate</center></h1>
+<h2 id="1-user-define-age-sex">1. user define (age, sex....)</h2>
+<h2 id="2-principal-component-analysis-pca">2. Principal component analysis (PCA)</h2>
+<h3 id="an-example-of-covariate-caculation--using-fastgwa">An example of covariate caculation  using fastGWA:</h3>
+<pre><code class="lang-shell">Input : data after quality  control
+
+Step1 &#xFF1A; data pruning   --indep-pairwise 50 5 0.1 
+     REF :   &#x201C;In classical multivariate analysis, the presence of highly correlated variables often complicates the data analysis without giving any extra information. &#x201D;  DOI&#xFF1A;10.1093/bib/bby081
+
+ pruned data &#xFF1A; SNPs ~ 3.5    M , individuals ~ 270,000  , TIME : 3~4 days /PHENO
+
+
+Step2 &#xFF1A; flashPCA2                                       MEM &lt;10G
+    REF &#xFF1A;&#x201C;Key to performance is the fact that the Arnoldi iterations only rely on matrix-vector multiplication with the genotype matrix X. FlashPCA2 employs a blockwise approach whereby a suitably-sized subset of the matrix is loaded into memory at one time.&#x201D;  DOI&#xFF1A;10.1093/bioinformatics/btx299
+</code></pre>
 
                                 
                                 </section>
@@ -523,7 +537,7 @@
 
             
                 
-                <a href="2.5.2 imputation.html" class="navigation navigation-prev " aria-label="Previous page: 2.5.2 imputation">
+                <a href="2.5.2 qc.html" class="navigation navigation-prev " aria-label="Previous page: 2.5.2 quality control">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -539,7 +553,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.5.3 covariate","level":"1.3.5.3","depth":3,"next":{"title":"2.5.4 association","level":"1.3.5.4","depth":3,"path":"2.5.4 asso.md","ref":"2.5.4 asso.md","articles":[]},"previous":{"title":"2.5.2 imputation","level":"1.3.5.2","depth":3,"path":"2.5.2 imputation.md","ref":"2.5.2 imputation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2.5.3 covariate.md","mtime":"2020-11-05T14:34:53.158Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-05T14:35:22.616Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.5.3 covariate","level":"1.3.5.3","depth":3,"next":{"title":"2.5.4 association","level":"1.3.5.4","depth":3,"path":"2.5.4 asso.md","ref":"2.5.4 asso.md","articles":[]},"previous":{"title":"2.5.2 quality control","level":"1.3.5.2","depth":3,"path":"2.5.2 qc.md","ref":"2.5.2 qc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2.5.3 covariate.md","mtime":"2020-11-06T08:14:47.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-06T11:10:58.612Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
